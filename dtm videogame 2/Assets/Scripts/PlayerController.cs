@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 { 
     // Initalizing character speed and control
-    public float speed = 10.0f;
+    private float speed = 10.0f;
     public float horizontalInput;
-    public float xRange = 9;
+    private float xRange = 12f;
+    private Animator playerAnim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,5 +30,13 @@ public class PlayerController : MonoBehaviour
         // Moves player horizontally based on player input
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        if (horizontalInput > 0)
+        {
+            playerAnim.SetTrigger("Run_trig");
+        }
+        else if(horizontalInput < 0)
+        {
+            playerAnim.SetTrigger("Idle_trig");
+        }
     }
 }
