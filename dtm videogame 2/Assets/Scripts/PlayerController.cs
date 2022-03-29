@@ -9,12 +9,12 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     private float xRange = 18f;
     private Animator playerAnim;
-    private Rigidbody playerRb;
+    private Rigidbody2D playerRb;
     // Start is called before the first frame update
     void Start()
     {
         playerAnim = GetComponent<Animator>();
-        playerRb = GetComponent<Rigidbody>();
+        playerRb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         // Moves player horizontally based on player input
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        if (horizontalInput > 0)
+        if (horizontalInput > 0 || horizontalInput < 0)
         {
             playerAnim.SetTrigger("Run_trig");
         }
@@ -43,7 +43,8 @@ public class PlayerController : MonoBehaviour
         // Make Player jump when spacebar pressed
         if(Input.GetKeyDown(KeyCode.Space))
             {
-                playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+                playerAnim.SetTrigger("Jump_trig");
+                playerRb.AddForce(transform.up * 10, ForceMode2D.Impulse);
             }
         }
     }
