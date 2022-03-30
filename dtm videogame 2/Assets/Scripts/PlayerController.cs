@@ -12,12 +12,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb;
     private float jumpForce = 10;
     private float gravityModifier;
+    public float verticalInput;
     // Start is called before the first frame update
     void Start()
     {
         playerAnim = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
+    
     }
 
     // Update is called once per frame
@@ -40,18 +42,22 @@ public class PlayerController : MonoBehaviour
         {
             playerAnim.SetTrigger("Run_trig");
         }
-        else if(horizontalInput == 0)
+        else if (horizontalInput == 0)
         {
-            //playerAnim.ResetTrigger("Run_trig");
+            playerAnim.ResetTrigger("Run_trig");
             playerAnim.Rebind();
             playerAnim.SetTrigger("Idle_trig");
+            
+        }
         // Make Player jump when spacebar pressed
-        if(Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.Space) && Input.GetKeyDown(KeyCode.RightArrow)))
-            {
+        if (Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.Space) && Input.GetKeyDown(KeyCode.RightArrow)))
+        {
                 Debug.Log("In jump");
                 playerAnim.SetTrigger("Jump_trig");
                 playerRb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-            }
         }
+        // Check to see if player falling if so play falling ami
+        Debug.Log(playerRb.position);
+
     }
 }
