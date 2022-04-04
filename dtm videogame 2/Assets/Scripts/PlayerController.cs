@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 { 
-    // Initalizing character speed and control
+    // Initalizing character variables
     private float speed = 10.0f;
     public float horizontalInput;
     private float xRange = 100f;
@@ -56,8 +56,13 @@ public class PlayerController : MonoBehaviour
                 playerAnim.SetTrigger("Jump_trig");
                 playerRb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
         }
-        // Check to see if player falling if so play falling ami
-        Debug.Log(playerRb.position);
+        // Check to see if player falling out of bounds 
+        //verticalInput = playerRb.position;
+        if (transform.position.y < -5)
+        {
+            Debug.Log("Game Over");
+            Application.Quit();
+        }
 
     }
 }
