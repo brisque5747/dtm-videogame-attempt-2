@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
-    
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         //verticalInput = playerRb.position;
         if (transform.position.y < -5)
         {
-            Debug.Log("Game Over");
+            Debug.Log("Game Over, please press play button to run again");
             Application.Quit();
         }
 
