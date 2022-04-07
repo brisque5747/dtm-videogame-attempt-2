@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private float jumpForce = 10;
     private float gravityModifier;
     public float verticalInput;
+    public GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +64,12 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over, please press play button to run again");
             Application.Quit();
         }
-
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            float shootingY = transform.position.y + 2;
+            Vector2 shootingPosition = new Vector2(transform.position.x, shootingY);
+            // Launch pizza from player
+            Instantiate(projectilePrefab, shootingPosition, projectilePrefab.transform.rotation);
+        }
     }
 }
