@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class MoveForward : MonoBehaviour
+
+public class MoveBack : MonoBehaviour
 {
     public float speed = 10.0f;
     // Start is called before the first frame update
@@ -13,6 +14,6 @@ public class MoveForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.right * Time.deltaTime * speed);
+        transform.Translate(Vector2.left * Time.deltaTime * speed);
     }
 }
