@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 1703849672538187187}
   - component: {fileID: 1703849672538187180}
   - component: {fileID: 1703849672538187181}
-  - component: {fileID: 1703849672538187182}
   - component: {fileID: 1703849672538187184}
   - component: {fileID: 333615206384911187}
+  - component: {fileID: 8219437889554807421}
   m_Layer: 0
   m_Name: Pizza
-  m_TagString: Untagged
+  m_TagString: Pizza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000023841858, y: 0.012746658}
+  m_Offset: {x: 0.00068855286, y: 0.014690486}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -111,21 +111,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.40011835, y: 0.04925546}
+  m_Size: {x: 0.3892994, y: 0.030185109}
   m_EdgeRadius: 0
---- !u!114 &1703849672538187182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703849672538187183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07e42f50298911c4aa3014d6be1369fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!114 &1703849672538187184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,5 +136,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea7242204bdce3b48a34090c4bb16bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8219437889554807421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703849672538187183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb657bc602950344ab39e06f7abb601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

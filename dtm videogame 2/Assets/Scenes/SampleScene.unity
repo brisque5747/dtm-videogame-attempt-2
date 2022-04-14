@@ -261,9 +261,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1681230652571976995, guid: 2caa81974a5b5da4fbef3131d446d195, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4182903
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681230652571976995, guid: 2caa81974a5b5da4fbef3131d446d195, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3179291
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681230652571976995, guid: 2caa81974a5b5da4fbef3131d446d195, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.33042687
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681230652571976995, guid: 2caa81974a5b5da4fbef3131d446d195, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.71114105
+      objectReference: {fileID: 0}
     - target: {fileID: 1681230652571977000, guid: 2caa81974a5b5da4fbef3131d446d195, type: 3}
       propertyPath: m_Name
       value: HeroKnight_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681230652571977000, guid: 2caa81974a5b5da4fbef3131d446d195, type: 3}
+      propertyPath: m_TagString
+      value: MainPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 1681230652571977004, guid: 2caa81974a5b5da4fbef3131d446d195, type: 3}
       propertyPath: projectilePrefab
@@ -322,6 +342,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1703849672538187181, guid: b558ce3f72c24984cac7a5dad821ad37, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3895216
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703849672538187181, guid: b558ce3f72c24984cac7a5dad821ad37, type: 3}
+      propertyPath: m_Size.y
+      value: 0.032804932
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703849672538187181, guid: b558ce3f72c24984cac7a5dad821ad37, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703849672538187181, guid: b558ce3f72c24984cac7a5dad821ad37, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.012881478
+      objectReference: {fileID: 0}
+    - target: {fileID: 1703849672538187181, guid: b558ce3f72c24984cac7a5dad821ad37, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1703849672538187183, guid: b558ce3f72c24984cac7a5dad821ad37, type: 3}
       propertyPath: m_Name
       value: Pizza
@@ -484,6 +524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square
       objectReference: {fileID: 0}
+    - target: {fileID: 2679264408070711557, guid: dec33e7e17df9b949a9f34d5ad6a148e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec33e7e17df9b949a9f34d5ad6a148e, type: 3}
 --- !u!1001 &6259468197385896523
@@ -541,6 +585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6259468196036343927, guid: 3a9639752ca24524db98075f88a195bb, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a9639752ca24524db98075f88a195bb, type: 3}
 --- !u!1001 &7118746959257853744
@@ -553,6 +601,10 @@ PrefabInstance:
     - target: {fileID: 7118746961093087371, guid: 094ef019acc86f84bb4798422f119289, type: 3}
       propertyPath: m_Name
       value: Square (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118746961093087371, guid: 094ef019acc86f84bb4798422f119289, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7118746961093087374, guid: 094ef019acc86f84bb4798422f119289, type: 3}
       propertyPath: m_RootOrder

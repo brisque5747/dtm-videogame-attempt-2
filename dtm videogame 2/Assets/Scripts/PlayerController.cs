@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            float shootingY = transform.position.y + 2;
+            float shootingY = transform.position.y + 2f;
             Vector2 shootingPosition = new Vector2(transform.position.x, shootingY);
             // Launch pizza from player
             Instantiate(projectilePrefab, shootingPosition, projectilePrefab.transform.rotation);
