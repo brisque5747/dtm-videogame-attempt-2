@@ -465,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1800813019872768182, guid: 7029394f416361345885a9a7f0c59ca4, type: 3}
       propertyPath: m_Name
-      value: cerberus-black
+      value: Monster1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7029394f416361345885a9a7f0c59ca4, type: 3}
@@ -661,7 +661,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7741916332718124725, guid: ce37769500a608e43b23c558dd99890a, type: 3}
       propertyPath: m_Name
-      value: ooze-green
+      value: Monster2
       objectReference: {fileID: 0}
     - target: {fileID: 7741916332718124727, guid: ce37769500a608e43b23c558dd99890a, type: 3}
       propertyPath: m_RootOrder

@@ -12,6 +12,8 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // this section of code is called automatically and applies to the 'Monster1' and 'Monster2' prefabs
+        // this just essientally invokes the function at the bottom of the code
         InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
 

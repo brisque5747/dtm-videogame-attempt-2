@@ -26,7 +26,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Keep player in bounds
+        // this section of code is called when the character goes outside of the xrange (outside of the camera zone)
+        // it keeps them at the range they are trying to go outisde of, to prevent them from falling off the map
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
@@ -35,10 +36,12 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
-        // Moves player horizontally based on player input
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
+        // this section of code is called when the player starts moving left or right on the platforms (running)
+        // it TRIGGERS an animation to run that looks like someone running.
+        // if the character stops running the code detects this and stops the animation and switches to an idle animation
         if (horizontalInput > 0 || horizontalInput < 0)
         {
             playerAnim.SetTrigger("Run_trig");
@@ -50,25 +53,30 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetTrigger("Idle_trig");
             
         }
-        // Make Player jump when spacebar pressed
+
+        // this section of code is called when player presses the spacebar key OR presses the spacebar key & rightarrow
+        // it triggers an animation ti run that looks like someone jumping
         if (Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.Space) && Input.GetKeyDown(KeyCode.RightArrow)))
         {
                 Debug.Log("In jump");
                 playerAnim.SetTrigger("Jump_trig");
                 playerRb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
         }
-        // Check to see if player falling out of bounds 
-        //verticalInput = playerRb.position;
+
+        // this section of code is called when player falls off of the map and is BELOW the value that triggers the variable
+        // it triggers a message on the bottom left of the screen that declares the game over
         if (transform.position.y < -5)
         {
             Debug.Log("Game Over, please press play button to run again");
             Application.Quit();
         }
+
+        // this section of code is called when the player presses the S key on their keyboard
+        // it triggers a prefab to form above the player to shoot out at the monsters to 'neutralise them'
         if (Input.GetKeyDown(KeyCode.S))
         {
             float shootingY = transform.position.y + 2f;
             Vector2 shootingPosition = new Vector2(transform.position.x, shootingY);
-            // Launch pizza from player
             Instantiate(projectilePrefab, shootingPosition, projectilePrefab.transform.rotation);
         }
     }

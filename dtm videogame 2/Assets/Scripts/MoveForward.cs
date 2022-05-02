@@ -13,6 +13,8 @@ public class MoveForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // this section of code is called automatically and attached to the 'Pizza' prefab
+        // it essentially just propels the object to the right horizontally
         transform.Translate(Vector2.right * Time.deltaTime * speed);
     }
 }
