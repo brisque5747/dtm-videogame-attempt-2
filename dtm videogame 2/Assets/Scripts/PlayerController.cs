@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         // it triggers a prefab to form above the player to shoot out at the monsters to 'neutralise them'
         if (Input.GetKeyDown(KeyCode.S))
         {
-            float shootingY = transform.position.y + 2f;
+            float shootingY = transform.position.y + 1f;
             Vector2 shootingPosition = new Vector2(transform.position.x, shootingY);
             Instantiate(projectilePrefab, shootingPosition, projectilePrefab.transform.rotation);
         }
