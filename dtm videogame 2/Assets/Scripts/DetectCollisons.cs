@@ -17,6 +17,10 @@ public class DetectCollisons : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
+        // this section of code is called when monster and pizza collide
+        // it destroys the object and adds a message to your log
+        // parameters - monsters and pizza
+        // return value - "it works"
         if (gameObject.tag == "Monsters" && other.gameObject.tag == "Pizza")
         {
             Destroy(gameObject);

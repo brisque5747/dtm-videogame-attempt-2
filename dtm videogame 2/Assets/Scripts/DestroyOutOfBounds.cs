@@ -14,6 +14,8 @@ public class DestroyOutOfBounds : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    // this section of code is called when the proteciles or monsters go out of bound
+    // this code destroys the object if it goes out of bound
     {
         if (transform.position.x > topBound)
         {

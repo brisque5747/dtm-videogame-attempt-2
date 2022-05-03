@@ -24,6 +24,10 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnRandomAnimal()
     {
+        // this section of code is called when the function is invoked at the Start
+        // it basically spawns a random type of monster at a selected location on the map and at a specficed rotation
+        // parameters - Start() function
+        // return value - N/A
         int animalIndex = Random.Range(0, animalPrefabs.Length);
         Instantiate(animalPrefabs[animalIndex], new Vector3(25, 3, 0), animalPrefabs[animalIndex].transform.rotation);
     } 
