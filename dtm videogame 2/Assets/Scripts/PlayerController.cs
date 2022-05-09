@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 { 
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     private float gravityModifier;
     public float verticalInput;
     public GameObject projectilePrefab;
+    public TextMeshProUGUI youLose;
+    public bool isGameActive;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,13 +67,12 @@ public class PlayerController : MonoBehaviour
         }
 
         // this section of code is called when player falls off of the map and is BELOW the value that triggers the variable
-        // it triggers a message on the bottom left of the screen that declares the game over
-        if (transform.position.y < -5)
+        // it triggers a message on the screen that declares the game over
+        if (transform.position.y <= -5)
         {
-            Debug.Log("Game Over, please press play button to run again");
-            Application.Quit();
+            youLose.gameObject.SetActive(true);
+            isGameActive = false;
         }
-
         // this section of code is called when the player presses the S key on their keyboard
         // it triggers a prefab to form above the player to shoot out at the monsters to 'neutralise them'
         if (Input.GetKeyDown(KeyCode.S))
