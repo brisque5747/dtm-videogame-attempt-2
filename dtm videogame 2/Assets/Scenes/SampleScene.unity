@@ -1143,6 +1143,10 @@ PrefabInstance:
       value: MainPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 1681230652571977004, guid: 2caa81974a5b5da4fbef3131d446d195, type: 3}
+      propertyPath: youLose
+      value: 
+      objectReference: {fileID: 716294983}
+    - target: {fileID: 1681230652571977004, guid: 2caa81974a5b5da4fbef3131d446d195, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 1703849672538187183, guid: b558ce3f72c24984cac7a5dad821ad37, type: 3}

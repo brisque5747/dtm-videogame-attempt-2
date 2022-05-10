@@ -8,7 +8,6 @@ public class GameController : MonoBehaviour
     private int score;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI youWin;
-    public TextMeshProUGUI youLose;
     public bool isGameActive;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +28,7 @@ public class GameController : MonoBehaviour
             youWin.gameObject.SetActive(true);
             isGameActive = false;
         }
-
+        
 
     }
     public void UpdateScore(int scoreToAdd)
